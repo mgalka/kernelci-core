@@ -415,6 +415,16 @@ def runTest(kci_core, describe, expected=0, runs=0) {
  * bisection
  */
 
+def getBadRevision(bad_revision) {
+    def bad_rev_exists = sh(
+        returnStatus: true,
+        script: "git show --oneline ${bad_revision}")
+        if (! bad_rev_exists) {
+            print("Bad commit not in current branch, changing to HEAD")
+        }
+    return bad_rev_exists ? bad_revision : "HEAD"
+}
+
 def findMergeBase(kdir, kci_core, good, bad) {
     def base = good
 
@@ -594,7 +604,7 @@ def bisection(kci_core, kdir, checks) {
             fetchLabInfo(kci_core)
         }
 
-        bad = params.BAD_COMMIT
+        bad = getBadRevision(params.BAD_COMMIT)
         good = findMergeBase(kdir, kci_core, params.GOOD_COMMIT, bad)
     }
 
