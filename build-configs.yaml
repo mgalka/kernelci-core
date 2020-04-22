@@ -4,6 +4,9 @@
 
 trees:
 
+  mgalka:
+    url: 'https://gitlab.collabora.com/mgalka/linux.git'
+  
   agross:
     url: "https://git.kernel.org/pub/scm/linux/kernel/git/qcom/linux.git"
 
@@ -1131,3 +1134,13 @@ build_configs:
     tree: vireshk
     branch: 'for-kernelci'
     variants: *minimal_variants
+ 
+  mgalka:
+    tree: mgalka
+    branch: 'mgalka'
+    variants:
+      gcc-8:
+        build_environment: gcc-8
+        architectures:
+          x86_64: *x86_64_arch
+
