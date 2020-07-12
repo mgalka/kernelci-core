@@ -1137,10 +1137,10 @@ build_configs:
  
   mgalka:
     tree: mgalka
-    branch: 'mgalka'
+    branch: 'unhandled_exception'
     variants:
       gcc-8:
         build_environment: gcc-8
         architectures:
-          x86_64: *x86_64_arch
+          arm: *arm_arch
 

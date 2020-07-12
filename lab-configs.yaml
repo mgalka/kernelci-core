@@ -122,3 +122,13 @@ labs:
       - passlist:
           plan:
             - baseline
+
+  mgalka-lava-local:
+    lab_type: lava
+    url: 'http://kernelci-lava/RPC2/'
+    filters:
+      - passlist:
+          plan:
+            - baseline
+
+
