@@ -15,7 +15,7 @@ file_system_types:
       mipsel:  [{arch: mips}]
 
   debian:
-    url: 'http://storage.kernelci.org/images/rootfs/debian'
+    url: 'http://storage.staging.kernelci.org/images/rootfs/debian/mgalka'
     arch_map:
       armhf: [{arch: arm}]
       amd64: [{arch: x86_64}]
@@ -33,30 +33,30 @@ file_systems:
 
   debian_buster_ramdisk:
     type: debian
-    ramdisk: 'buster/20201002.0/{arch}/rootfs.cpio.gz'
+    ramdisk: 'buster/20201015.1/{arch}/rootfs.cpio.gz'
 
   debian_buster_nfs:
     type: debian
-    ramdisk: 'buster/20201002.0/{arch}/initrd.cpio.gz'
-    nfs: 'buster/20201002.0/{arch}/full.rootfs.tar.xz'
+    ramdisk: 'buster/20201015.1/{arch}/initrd.cpio.gz'
+    nfs: 'buster/20201015.1/{arch}/full.rootfs.tar.xz'
     root_type: nfs
 
   debian_buster-cros-ec_ramdisk:
     type: debian
-    ramdisk: 'buster-cros-ec/20201002.0/{arch}/rootfs.cpio.gz'
+    ramdisk: 'buster-cros-ec/20201015.1/{arch}/rootfs.cpio.gz'
 
   debian_buster-igt_ramdisk:
     type: debian
-    ramdisk: 'buster-igt/20201002.0/{arch}/rootfs.cpio.gz'
+    ramdisk: 'buster-igt/20201015.1/{arch}/rootfs.cpio.gz'
 
   debian_buster-v4l2_ramdisk:
     type: debian
-    ramdisk: 'buster-v4l2/20201002.0/{arch}/rootfs.cpio.gz'
+    ramdisk: 'buster-v4l2/20201015.1/{arch}/rootfs.cpio.gz'
 
   debian_buster-ltp_nfs:
     type: debian
-    ramdisk: 'buster-ltp/20201002.0/{arch}/initrd.cpio.gz'
-    nfs: 'buster-ltp/20201002.0/{arch}/full.rootfs.tar.xz'
+    ramdisk: 'buster-ltp/20201015.1/{arch}/initrd.cpio.gz'
+    nfs: 'buster-ltp/20201015.1/{arch}/full.rootfs.tar.xz'
     root_type: nfs
 
 
