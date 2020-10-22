@@ -136,6 +136,8 @@ trees:
   vireshk:
     url: "https://git.kernel.org/pub/scm/linux/kernel/git/vireshk/linux.git"
 
+  mgalka-next:
+    url: "https://gitlab.collabora.com/mgalka/linux-next.git"
 
 fragments:
 
@@ -1082,3 +1084,12 @@ build_configs:
     tree: vireshk
     branch: 'for-kernelci'
     variants: *minimal_variants
+
+  mgalka-next:
+    tree: mgalka-next
+    branch: 'mg-next-20201022'
+    variants:
+      gcc-8:
+        build_environment: gcc-8
+        architectures:
+          arm64: *arm64_arch
