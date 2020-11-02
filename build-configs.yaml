@@ -136,6 +136,11 @@ trees:
   vireshk:
     url: "https://git.kernel.org/pub/scm/linux/kernel/git/vireshk/linux.git"
 
+  mgalka-next:
+    url: "https://gitlab.collabora.com/mgalka/linux-next.git"
+
+  mgalka:
+    url: "https://gitlab.collabora.com/mgalka/linux.git"
 
 fragments:
 
@@ -1088,3 +1093,16 @@ build_configs:
     tree: vireshk
     branch: 'for-kernelci'
     variants: *minimal_variants
+
+  mgalka-unhandled-fault:
+    tree: mgalka
+    branch: 'unhandled_fault'
+    variants:
+      gcc-8:
+        build_environment: gcc-8
+        architectures:
+          arm:
+            base_defconfig: 'multi_v7_defconfig'
+            filters:
+              - regex: { defconfig: 'multi_v7_defconfig' }
+
